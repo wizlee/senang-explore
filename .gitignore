@@ -43,3 +43,6 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# generated swagger-codegen angular code
+/projects/senang-swagger-client/src

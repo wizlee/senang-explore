@@ -14,6 +14,12 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
+    "paths": {
+      "senang-swagger-client": [
+        "dist/senang-swagger-client/senang-swagger-client",
+        "dist/senang-swagger-client"
+      ]
+    },
     "target": "es2017",
     "module": "es2020",
     "lib": [

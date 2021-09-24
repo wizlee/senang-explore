@@ -106,6 +106,37 @@
           }
         }
       }
+    },
+    "senang-swagger-client": {
+      "projectType": "library",
+      "root": "projects/senang-swagger-client",
+      "sourceRoot": "projects/senang-swagger-client/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/senang-swagger-client/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/senang-swagger-client/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/senang-swagger-client/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/senang-swagger-client/src/test.ts",
+            "tsConfig": "projects/senang-swagger-client/tsconfig.spec.json",
+            "karmaConfig": "projects/senang-swagger-client/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "senang-explore"

@@ -12,7 +12,26 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. First generate Senang APIs Angular client by using swagger-codegen
+  - Example: `java -jar swagger-codegen-cli.jar generate -i swaggerbigPayTest.json -l typescript-angular -o senang-explore/projects/senang-swagger-client/src --additional-properties ngVersion=12.2.7`
+2. Build the 'senang-swagger-client' Angular library by running `ng build senang-swagger-client`
+3. `ng build` or `ng serve` as usual
+- references:
+  - https://medium.com/sohoffice/the-api-first-strategy-use-swagger-to-generate-api-client-as-an-angular-library-66964ea43587
+  ```ts
+  import {ApiModule} from 'foo-swagger-client';
+  @NgModule({
+    declarations: [
+      AppComponent
+    ],
+    imports: [
+      ...
+      ApiModule.forRoot(IdentityService.getApiConfiguration),
+      ...
+  })
+  export class AppModule {
+  }
+  ```
 
 ## Running unit tests
 
