@@ -1,0 +1,55 @@
+<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+<header class="ccheader">
+    <h1>Host Your Home</h1>
+</header>
+
+<div class="wrapper">
+    <form class="ccform"
+      #f="ngForm"
+      (ngSubmit)="onSubmit(f)">
+    <div class="ccfield-prepend">
+        <span class="ccform-addon"><i class="fa fa-user fa-2x"></i></span>
+        <input class="ccformfield" name="name" #name="ngModel" type="text" placeholder="Full Name" ngModel required>
+    </div>
+    <div class="ccfield-prepend">
+        <span class="ccform-addon"><i class="fa fa-envelope fa-2x"></i></span>
+        <input class="ccformfield" name="email" #email="ngModel" type="email" placeholder="Email" ngModel required>
+    </div>
+    <div class="ccfield-prepend">
+        <span class="ccform-addon"><i class="fa fa-home fa-2x"></i></span>
+        <textarea class="ccformfield" name="address" #address="ngModel" rows="8" placeholder="Address" ngModel required></textarea>
+    </div>
+    <div class="ccfield-prepend">
+        <span class="ccform-addon"><i class="fa fa-code fa-2x"></i></span>
+        <input class="ccformfield" name="postcode" #postcode="ngModel" type="number" placeholder="Postcode" ngModel required>
+    </div>
+    <div class="ccfield-prepend">
+        <span class="ccform-addon"><i class="fa fa-tag fa-2x"></i></span>
+        <input class="ccformfield" name="ic" #ic="ngModel" type="number" placeholder="IC Number" ngModel required>
+    </div>
+    <div class="ccfield-prepend">
+        <span class="ccform-addon"><i class="fa fa-calendar fa-2x"></i></span>
+        <input class="ccformfield" name="dob" #dob="ngModel" type="string" placeholder="Date Of Birth (YYYY-MM-DD)" ngModel required>
+    </div>
+    <div class="ccfield-prepend">
+        <span class="ccform-addon"><i class="fa fa-calendar fa-2x"></i></span>
+        <input class="ccformfield" name="riskefdate" #riskefdate="ngModel" type="string" placeholder="Risk Effective Date (YYYY-MM-DD)" ngModel required>
+    </div>
+    <div class="ccfield-prepend">
+        <span class="ccform-addon"><i class="fa fa-book fa-2x"></i></span>
+        <input class="ccformfield" name="plan" #plan="ngModel" type="string" placeholder="Plan (A or B)" ngModel required>
+    </div>
+    <div class="ccfield-prepend">
+        <span class="ccform-addon"><i class="fa fa-file-text fa-2x"></i></span>
+        <input class="ccformfield" name="bname" #bname="ngModel" type="string" placeholder="Beneficiary Name" ngModel required>
+    </div>
+    <div class="ccfield-prepend">
+        <span class="ccform-addon"><i class="fa fa-book fa-2x"></i></span>
+        <input class="ccformfield" name="brelationship" #brelationship="ngModel" type="string" placeholder="Beneficiary Relationship" ngModel required>
+    </div>
+    <div class="ccfield-prepend">
+        <input class="ccbtn" type="submit" value="Submit">
+    </div>
+    </form>
+</div>

@@ -19,7 +19,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 - references:
   - https://medium.com/sohoffice/the-api-first-strategy-use-swagger-to-generate-api-client-as-an-angular-library-66964ea43587
   ```ts
-  import {ApiModule} from 'foo-swagger-client';
+  import {ApiModule} from 'senang-swagger-client';
   @NgModule({
     declarations: [
       AppComponent
